@@ -8,3 +8,5 @@ https://github.com/cjbuenom/angularDev/tree/proyectoCbAngular
 https://github.com/cjbuenom/angularDev/tree/proyectoCBAngular-api
 
 
+#Cristian Bueno 2022 - https://escalab.academy/
+
