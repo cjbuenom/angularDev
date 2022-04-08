@@ -1,0 +1,7 @@
+.dataitemdisabled{
+    display:  none;
+}
+
+.dataitemactivated{
+    display: flex;
+}

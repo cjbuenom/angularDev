@@ -1,0 +1,172 @@
+
+<form class="container-fluid" (ngSubmit)="guardar()" [formGroup]="forma" > 
+<div class="card text-center" style="max-width: 1700px; display: flexbox; ">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" href="#">Datos del Extintor</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body"> 
+        <div class="row g-2">
+
+            <div class="col-md">
+                <div class="form-floating" >
+                  <select class="form-select" id="agentextin" aria-label="Selecciona Un Agente Extintor" formControlName="agentextin" >
+                  
+                    <option value="PQS">PQS</option>
+                    <option value="Co2">Co2</option>
+                    <option value="HALO CLEAN BC">HALO CLEAN BC</option>
+                    <option value="CLORURO DE SODIO D">CLORURO DE SODIO D</option>
+                    <option value="AGUA PRESURIZADA A">AGUA PRESURIZADA A</option>
+                    
+                    
+                  </select>
+                  <label for="agentextin">Selecciona Un Agente Extintor</label>
+                </div>
+              </div>
+
+            <div class="col-md">
+              <div class="form-floating">
+                <select class="form-select" id="capacityextinguisher" aria-label="Selecciona Una Capacidad" formControlName="capacity" >
+                  <option value="10">10</option>
+                  <option value="6">6</option>
+                  <option value="20">20</option>
+                </select>
+                <label for="capacityextinguisher">Selecciona Una Capacidad</label>
+              </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="numberCert" maxlength="20" placeholder="44552365" formControlName="numbercert">
+                    <label for="numberCert">Numero de Certificacion</label>
+                </div>
+            </div>
+            
+            <div class="col-md">
+                <div class="card-body"  >
+                    <div >
+                        <input type="radio" class="btn-check"  id="option1" autocomplete="off" value="INCEN"formControlName="certifier">
+                        <label class="btn btn-outline-primary" for="option1">INCEN</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="btn-check"  id="option2" autocomplete="off" value="CESMEC" formControlName="certifier">
+                        <label class="btn btn-outline-primary" for="option2">CESMEC</label>
+                    </div>
+                    <div >
+                        <input type="radio" class="btn-check" id="option3" autocomplete="off" value="IDIEM" formControlName="certifier" >
+                        <label class="btn btn-outline-primary" for="option3">IDIEM</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+          </div> 
+
+          <div class="card row g-2"> 
+            <div class="col-md">
+          
+                <div class="card-header">Trabajos Realizados</div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" formControlName="workA">
+                    <label class="form-check-label" for="inlineCheckbox1">A: MANTENCION</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" formControlName="workB">
+                    <label class="form-check-label" for="inlineCheckbox2">B: RECARGA</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" formControlName="workC">
+                    <label class="form-check-label" for="inlineCheckbox3">C: CAMBIO DE VALVULA</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4" formControlName="workD">
+                    <label class="form-check-label" for="inlineCheckbox4">D: CAMBIO DE MANGUERA A DIFUSOR</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5" formControlName="workE">
+                    <label class="form-check-label" for="inlineCheckbox5">E: CAMBIO DE MANOMETRO</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6" formControlName="workF">
+                    <label class="form-check-label" for="inlineCheckbox6">F:CAMBIO DE SIFON</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7" formControlName="workG">
+                    <label class="form-check-label" for="inlineCheckbox7">G:CAMBIO DE ORRING¨S</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8" formControlName="workH">
+                    <label class="form-check-label" for="inlineCheckbox8">H: PINTADO Y ROTULADO</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9" formControlName="workI">
+                    <label class="form-check-label" for="inlineCheckbox9">I : PRUEBA HIDROSTATICA </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10" formControlName="workJ">
+                    <label class="form-check-label" for="inlineCheckbox10">J: CINTILLO</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11" formControlName="workK">
+                    <label class="form-check-label" for="inlineCheckbox11">K:  PASADOR METALICO</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12" formControlName="workL">
+                    <label class="form-check-label" for="inlineCheckbox12">L: OTROS   </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13" formControlName="workM">
+                    <label class="form-check-label" for="inlineCheckbox13">M:  MANTENER SERVICIO  (  E  )</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option14" formControlName="workN">
+                    <label class="form-check-label" for="inlineCheckbox14"> N: DADO DE BAJA </label>
+                  </div>
+                  
+
+                
+
+
+            </div> 
+
+            <div class="card-body">
+                    
+                <!-- <a class="btn btn-primary"  >Agregar Item</a> -->
+                <!-- (click)="addItem()" -->
+                <!-- this.forma.agentextin  -->
+
+                <button type="submit" class="btn btn-primary" id="additemorder"  >
+                    Agregar Item
+                  </button>
+            </div>
+
+
+    </div>
+
+</div>
+</div>
+
+</form>
+
+<div class="card container-fluid" style="max-width: 1700px;  display: flexbox; ">
+         
+  <div class="album py-5 bg-light"  style="max-width: 1600px;" >
+    <div class="container">   
+    
+          <div *ngIf="itemsOrdenActual.length >= 0">
+            <app-griditems [titulos]="titulosColumnas" [dataInputform]="itemsOrdenActual" [indexInput]="cantidaditems" *ngIf="itemsOrdenActual!=null"></app-griditems>
+          </div>
+
+          <p *ngIf="itemsOrdenActual.length == 0" class="col-md-8 fs-4"> No hay items agregados a la orden.</p>   
+        </div>
+      </div> 
+</div>

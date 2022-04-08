@@ -1,0 +1,51 @@
+<form class="container-fluid" (ngSubmit)="newOrderService()" [formGroup]="forma" > 
+<div class="card-body row g-2">
+    <div class="col-md">
+        <div class="form-floating" style="max-width: 15rem;">
+            <input type="text" class="form-control" id="numberorder" placeholder="" formControlName="numberorder">
+            <label for="numberorder">ORDEN DE SERVICIO N°</label>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="form-floating" style="max-width: 70rem;">
+            <input type="text" class="form-control" id="nameclient" placeholder="" formControlName="nameclient">
+            <label for="nameclient">CLIENTE</label>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="form-floating" style="max-width: 15rem;" >
+            <input type="date" class="form-control" id="dateingress" placeholder="" formControlName="dateingress">
+            <label for="dateingress">FECHA INGRESO AL TALLER:</label>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="form-floating" style="max-width: 15rem;" >
+            <input type="date" class="form-control" id="dateegress" placeholder="" formControlName="dateegress">
+            <label for="dateegress"> FECHA SALIDA AL TALLER:</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary"   >
+        Iniciar orden
+      </button>
+   
+</div>
+
+<div class="card text-center" style="max-width: 1700px; display: flexbox; ">
+
+    <div class="card-body dataitemdisabled" id="zonaitems">
+        <div class="row g-2">
+          <app-dataitem [numOrdercurrent]="valoraux" (primeritem)="pintaFinalizar($event)"></app-dataitem>
+          </div>
+          <!-- <div *ngIf="valoraux.length >= 0">
+
+          </div>      -->
+   </div>
+</div>
+
+
+<div class="card-body text-center dataitemdisabled" id="neworder">
+    <a class="btn btn-primary" (click)="this.auth.loginWithRedirect({ appState: { target: '/serviceorder' }})">Finalizar Orden de Servicio</a>
+  </div>  
+
+</form>
