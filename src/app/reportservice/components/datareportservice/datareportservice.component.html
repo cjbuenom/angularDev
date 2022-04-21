@@ -1,0 +1,78 @@
+<form [formGroup]="formadatareport"> 
+<div class="card  card-body text-center container-fluid" style="margin: 0rem 1rem 1rem 0rem; padding: 0rem 2rem 0rem 0rem; max-width: 1700px; display: flexbox;"> 
+  <div class="mb-3" style=" max-width: 1580px; display: flexbox;">
+    <div class="row g-0">
+      <div class="col-md-4" style=" margin: 0rem 0rem 0rem 2rem; padding: 0rem 0rem 0rem 2rem;"  >
+        <img src="./assets/imagenes/logo1.img" class="img-fluid rounded-start"  style="width:400px; height:200px;"  alt="...">
+      </div>
+      <div class="col-md-8"style=" margin: 1rem 0rem 0rem 0rem; padding: 1rem 0rem 0rem 0rem; max-width: 800px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: right;" >Av Doctor Guillermo Mann 901, piso 2 local 2 Ñuñoa. RM</h4>
+          <h5 class="card-title" style="text-align: right;"> Telf. : (2) 32325545</h5>
+          <h5 class="card-title" style="text-align: right;"> Whatsapp +56978311192 </h5>
+          <h5 class="card-title" style="text-align: right;"> Correo: Ventas@sistemfuego.cl  </h5>
+          <h5 class="card-title" style="text-align: right;"> Web: www.sistemfuego.cl </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card-body ">
+        <div class="card-header" >
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="true" href="#">Datos Del Informe</a>
+              </li>
+            </ul>
+          </div>
+        <div class="row g-2">
+            <div class="col-md">
+                <span class="input-group-text" ></span>
+                <input type="text" class="form-control" placeholder="Cliente" (change)="validateDatareport()" aria-label="Cliente" formControlName="nameclient">
+                <span class="input-group-text"></span>
+                <input type="text" class="form-control" placeholder="Rut" (change)="validateDatareport()" aria-label="Rut" formControlName="rutclient">
+                <span class="input-group-text"></span>
+                <input type="text" class="form-control" placeholder="Direccion" (change)="validateDatareport()" aria-label="Direccion" formControlName="direccClient"> 
+            </div>
+            <div class="col-md">
+                <span class="input-group-text"></span>
+                <input type="text" class="form-control" placeholder="Cuenta" (change)="validateDatareport()" aria-label="Cuenta" formControlName="cuentaClient">
+                <span class="input-group-text"></span>
+                <input type="text" class="form-control" placeholder="Cargo" (change)="validateDatareport()" aria-label="Cargo" formControlName="cargoclient">
+                <span class="input-group-text"></span>
+                <input type="text" class="form-control" placeholder="Telefono" (change)="validateDatareport()" aria-label="Telefono" formControlName="tlfClient">
+            </div>
+            <div class="col-md">
+              <span class="input-group-text"></span>
+              <input type="text" class="form-control" placeholder="Correo Electronico" (change)="validateDatareport()" aria-label="Correo Electronico" formControlName="emailClient">
+              <span class="input-group-text"></span>
+              <input type="text" class="form-control" placeholder="Proponente" (change)="validateDatareport()" aria-label="Proponente" formControlName="proponenteCertifi"> 
+          </div>
+          <div class="col-md">
+            <span class="input-group-text"></span>
+            <input type="text" class="form-control" placeholder="Factura" (change)="validateDatareport()" aria-label="Factura" formControlName="nroFactura">
+            <span class="input-group-text"></span>
+            <input type="text" class="form-control" placeholder="OrdenCompra" (change)="validateDatareport() " aria-label="OrdenCompra" formControlName="nroOrderCompra">
+            <!-- <span class="input-group-text"></span> -->
+            <!-- <button type="submit" class="btn btn-primary" id="adDataReportservice"  >
+              Agregar Cebecera de Informe
+            </button> -->
+        </div>
+            <div class="col-md">
+          
+              <img src="./assets/imagenes/empresaCertif.img" class="img-fluid rounded-start" width="250px" height="250px" alt="...">
+           
+          </div>
+    </div>
+
+    <div class="row g-2" >
+
+      <div  id="zonagrilla"class="card  card-body text-center container-fluid dataitemdisabled" style="margin: 1rem 1rem 1rem 0rem; padding: 1rem 2rem 0rem 0rem; max-width: 1700px; display: flexbox;"> 
+      <app-gridatareport [numreportCurrent]="this.obj.nroReportService" ></app-gridatareport>      
+    </div>   
+  </div>
+
+ 
+ 
+  </div>
+</div>
+</form>

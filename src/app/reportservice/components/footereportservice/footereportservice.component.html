@@ -1,0 +1,64 @@
+<form  class="container-fluid card text-center" style=" max-width: 1700px; display: flexbox;" (ngSubmit)="ReportGenerateOK()" [formGroup]="formadatafooter"> 
+    <div class="card-body">
+         <div class="row g-2">
+            <div class="col-md" style=" max-width: 250px;">
+                
+                <input type="text" class="form-control" placeholder="Mes Servicio"  style=" max-width: 250px;"   (change)="validatefooterreport()"  aria-label="messervice" formControlName="dateMeServiceReport" >
+                <span class="input-group-text" style=" max-width: 250px;" ></span>
+              
+            </div>
+            <div class="col-md" style=" max-width: 250px;">
+                
+                <input type="number" class="form-control" style=" max-width: 250px;" placeholder="Año Servicio"  (change)="validatefooterreport()"  aria-label="anioservice" formControlName="dateAnioServiceReport" >
+                <span class="input-group-text" style=" max-width: 250px;" ></span>
+            </div>
+            <div class="col-md" >
+                
+                <input type="text" class="form-control"  placeholder="Servicio Realizado Por" (change)="validatefooterreport()" aria-label="nameworker" formControlName="NameWorkerOrder" >
+                <span class="input-group-text"  ></span>
+            </div>
+
+
+            
+        </div>
+        <div class="row g-2">
+            <div class="col-md">
+                <img src="./assets/imagenes/sello.img" class="img-fluid rounded-start" width="200px" height="200px" alt="...">
+           
+            </div>
+            <div class="col-md">
+                <img src="./assets/imagenes/firma.img" class="img-fluid rounded-start"   alt="...">
+      
+            </div>
+
+
+            
+        </div>
+        <div class="row g-2">
+            <div class="col-md">
+                <span class="input-group-text">FECHA DE PROXIMA MANTENCIÓN - {{this.auxMeService}} {{this.auxAnioService}} </span>
+           
+            </div> 
+        </div>
+        <div class="row g-2">
+           
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">observaciones</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                  </div>
+           
+         
+        </div>
+
+        <div class="album py-5 bg-light" style=" max-width: 250px;" id="zonagenerarReport" >
+            <div class="row g-2 text-center">
+                  <button type="submit"  class="btn btn-primary dataitemdisabled" id="generateReportService" (click)="this.auth.loginWithRedirect({ appState: { target: '/reportservice' }})">
+                      Generar Informe Servicio
+                    </button>
+              </div>
+          </div>
+
+    </div>
+</form>

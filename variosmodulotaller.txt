@@ -1,0 +1,39 @@
+Tecnico2022..
+sadads123
+
+<ng-template #loggedOut>
+            <button class="btn btn-outline-success" (click)="this.auth.loginWithRedirect({ appState: { target: '/path_cliente' }})">Log in</button>
+          </ng-template>
+
+
+
+ng generate module nombre_modulo --route path_delaruta --module app.module
+
+
+ng generate module reportservice --route reportservice --module app.module
+
+
+
+
+                    <!-- 
+    <div class="card-body" >
+         <div class=" col-md">
+            
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                  <h5 class="card-title"> Agente Extintor {{dataInput.agentextin}}</h5>
+                  <p class="card-text"> Capacidad {{dataInput.capacity}}</p>
+                  <p class="card-text"> certificador {{dataInput.certifier}}</p>
+                  <a href="#" class="btn btn-primary"> {{dataInput.numbercert}}</a>
+                </div>
+              </div> -->
+
+<!-- 
+     <table class="table caption-top"> -->
+                  <!-- </table> -->
+  
+<!--          
+        </div>
+    </div>
+ -->
+
